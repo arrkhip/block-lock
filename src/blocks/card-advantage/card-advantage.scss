@@ -1,0 +1,13 @@
+.card-advantage {
+	width: 100%;
+	max-width: 215px;
+	text-align: center;
+
+	&__banner {
+		margin-bottom: 40px;
+	}
+
+	&__descr {
+		font-size: 1.6rem;
+	}
+}

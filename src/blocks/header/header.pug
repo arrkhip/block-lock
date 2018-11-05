@@ -1,0 +1,25 @@
+include ../../blocks/svg-icon/svg-icon
+
+mixin header(mod)
+	+b.HEADER.header(class= mod)
+		.wrap
+			+e.A.logo(href="/")
+				img(src="img/header__logo.png", alt="")
+			+e.switch.js-header__switch
+				span
+			+e.inner
+				+e.NAV.nav
+					+e.UL.nav-list
+						+e.LI.nav-item
+							a(class=(page === 'products') ? "header__nav-link header__nav-link--active" : "header__nav-link" href="products.html") Продукция
+						+e.LI.nav-item
+							a(class=(page === 'about') ? "header__nav-link header__nav-link--active" : "header__nav-link" href="about.html") О компании
+						+e.LI.nav-item
+							a(class=(page === 'contacts') ? "header__nav-link header__nav-link--active" : "header__nav-link" href="contacts.html") Контакты
+						
+				+e.phone
+					img(src="img/icons/phone-blue.svg", alt="")
+					a(href="tel:8 (846) 991-65-25") 8 (846) 991-65-25
+				+e.email
+					img(src="img/icons/mail.svg", alt="")
+					a(href="mailto:info@blok-zamok.ru") info@blok-zamok.ru

@@ -1,0 +1,14 @@
+include ../../blocks/form/form
+
+mixin contacts() 
+	+b.SECTION.contacts
+		.wrap
+			h2 Контакты
+			+e.inner
+				+e.col
+					p <b>Адрес:</b> г.Самара, ул. Республиканская д. 60
+					p <b>Телефон:</b> (846) 991-65-25
+					p <b>E-mail:</b> info@blok-zamok.ru
+					+e#map.map
+				+e.col 
+					+form('Напишите нам')

@@ -1,0 +1,48 @@
+extends ../layout/layoutBase.pug
+
+include ../../blocks/header/header
+include ../../blocks/product-slider/product-slider
+include ../../blocks/card-products/card-products
+include ../../blocks/footer/footer
+
+block content
+	- var page = 'products';
+
+	+b.product-open-page
+		+header()
+		.bread-crumbs 
+			.wrap
+				ul
+					li
+						a(href="#") Главная  
+					li 
+						span /   
+					li
+						a(href="#") Продукция 
+					li
+						span /
+					li 
+						a(href="#") Блокировочные замки
+					li 
+						span /
+					li
+						span Механический одноключевой замок МБГ-31 (тип 31М)   
+		+e.wrap.wrap
+			h2 Механический одноключевой замок МБГ-31 (тип 31М) 
+			+e.inner
+				+product-slider()
+				+e.info
+					p Одноключевые замки МБГ-31 отпираются и запираются одним ключом КУ-1. Прежде, чем вставить ключ, надо убедиться, что совпадают номера секретов ключа и замка (номера секретов «выбиты» на ключе и на крышке замка). Далее, с замка снимается колпачок, закрывающий ключевое отверстие крышки замка. Ключ может быть вставлен в замок или вынут из него только в положении стержня «заперто», т.е. кода запорный стержень замка выдвинут из его корпуса. Если секреты ключа совпадают с секретами замка, то ключ полностью входит в замок и выступы поворотных дисков охватываются выступами вставки ключа. Поворотом ключа на 180 градусов выдвигается и втягивается запорный стержень замка.
+					span Ключ КУ-1 не входит в комплектацию 
+					+e.info-box
+						button.btn Заказать
+						button.btn.btn--empty Вернуться в каталог
+			h2 Похожие товары 
+			+e.list
+				+card-products('img/card-products__banner-6.png', 'Механический трехключевой замок МБГ-33 (тип 33М)') 
+				+card-products('img/card-products__banner-5.png', 'Поворотный замок ЗП (МБГ-32П)') 
+				+card-products('img/card-products__banner-2.png', 'Механический двухключевой замок МБГ-32 (тип 32М)') 
+				+card-products('img/card-products__banner-3.png', 'Механический трехключевой замок МБГ-33 (тип 33М)') 
+		+footer()
+
+	

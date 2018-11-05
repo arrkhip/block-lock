@@ -1,0 +1,15 @@
+include ../../blocks/checkbox/checkbox
+
+mixin form(title, mod) 
+	+b.FORM.form(class= mod)
+		h2!= title
+		label(for="name") Имя
+		input(type="text", id="name", name="name", required)
+		label(for="tel") Телефон
+		input.js-input-tel(type="tel", id="tel", name="tel", required)
+		label(for="email") E-mail
+		input(type="email", id="email", name="email", required)
+		label(for="message") Сообщение
+		textarea(id="message", name="message")
+		+checkbox('ch', 'Согласен(-на) на обработку персональных данных')
+		button.btn(disabled) Отправить заявку

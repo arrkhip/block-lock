@@ -1,0 +1,52 @@
+.about-slider {
+
+	&__inner{
+		display: flex;
+		align-items: center;
+	}
+
+	&__col {
+		width: 50%;
+
+		&:last-child {
+			margin-left: 50px;
+		}
+	}
+
+	&__info {
+		max-width: 450px;
+		padding-right: 15px;
+		padding-top: 35px;
+		padding-bottom: 35px;
+		border-top: 1px solid $black;
+		border-bottom: 1px solid $black;
+
+		p {
+
+			&:not(:last-child) {
+				margin-bottom: 25px;
+			}
+		}
+	}
+
+	@include width-md {
+
+		&__inner {
+			flex-direction: column;
+			padding-bottom: 70px;
+		}
+
+		&__col:first-child {
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 35px;
+		}
+
+		&__col:last-child {
+			padding: 0;
+			border: none;
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+}

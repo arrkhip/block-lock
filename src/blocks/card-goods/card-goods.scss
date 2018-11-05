@@ -1,0 +1,72 @@
+.card-goods {
+	position: relative;
+	width: 100%;
+	max-width: 380px;
+	height: 250px;
+	padding-top: 100px;
+	padding-left: 20px;
+	color: $white;
+
+	&--blue-dark {
+		background-color: $blue--dark;
+	}
+
+	&--blue {
+		background-color: $blue;
+	}
+
+	&--green {
+		background-color: $green;
+	}
+
+
+	&__info {
+
+		p {
+			min-height: 36px;
+			margin-bottom: 10px;
+		}
+
+		.btn {
+			background-color: transparent;
+			padding: 0 25px;
+			color: $white;
+			border: 1px solid white;
+
+			&:hover {
+				color: $black;
+				background-color: $white;
+			}
+		}
+	}
+
+	&__banner {
+		position: absolute;
+		right: 0;
+		bottom: -35px;
+	}
+
+	@include width-lg {
+		padding-top: 30px;
+
+		&__banner {
+			max-width: 190px;
+		}
+	}
+
+	@include width-md {
+		padding-top: 20px;
+
+		&__banner {
+			max-width: 150px;
+		}
+	}
+
+	@include width-sm {
+		padding-top: 40px;
+
+		&__banner {
+			max-width: 200px;
+		}
+	}
+}

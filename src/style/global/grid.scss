@@ -1,0 +1,18 @@
+.wrap {
+  max-width: 1170px;
+  min-width: 320px;
+  margin: auto;
+  padding: 0 15px;
+
+  @include width-lg {
+  	max-width: 970px;
+  }
+
+  @include width-md {
+  	max-width: 750px;
+  }
+
+  @include width-sm {
+  	max-width: 100%;
+  }
+}

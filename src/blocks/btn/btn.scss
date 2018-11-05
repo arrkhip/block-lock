@@ -1,0 +1,36 @@
+.btn {
+	display: inline-flex;
+	align-items: center;
+	height: 45px;
+	padding: 0 45px;
+	border: none;
+	font-size: 1.4rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: $white;
+	background-color: $green;
+	@include trs;
+
+	&:disabled {
+
+	}
+
+	&:hover {
+		cursor: pointer;
+		background-color: $white;
+		color: $green;
+	}
+
+	&--empty {
+		padding: 0 30px;
+		border: 1px solid $black;
+		color: $black;
+		background-color: transparent;
+
+		&:hover {
+			color: $green;
+			background-color: transparent;
+			border-color: $green;
+		}
+	}
+}

@@ -1,0 +1,40 @@
+// Файлы сторонних библиотек
+@import 'vendor/normalize/normalize.scss';
+@import 'vendor/slick-slider/slick.scss';
+@import 'vendor/animate/animate.scss';
+@import 'vendor/magnific-popup/magnific-popup.scss';
+
+// Общие файлы стилей
+@import 'global/variables.scss';
+@import 'global/font.scss';
+@import 'global/mixins.scss';
+@import 'global/grid.scss';
+@import 'global/base.scss';
+
+// Стилевые файлы БЭМ-блоков
+@import '../blocks/header/header.scss';
+@import '../blocks/footer/footer.scss';
+@import '../blocks/promo/promo.scss';
+@import '../blocks/btn/btn.scss';
+@import '../blocks/goods/goods.scss';
+@import '../blocks/card-goods/card-goods.scss';
+@import '../blocks/advantage/advantage.scss';
+@import '../blocks/card-advantage/card-advantage.scss';
+@import '../blocks/bid/bid.scss';
+@import '../blocks/form/form.scss';
+@import '../blocks/checkbox/checkbox.scss';
+@import '../blocks/bread-crumbs/bread-crumbs.scss';
+@import '../blocks/contacts/contacts.scss';
+@import '../blocks/card-products/card-products.scss';
+@import '../blocks/product-slider/product-slider.scss';
+@import '../blocks/about-slider/about-slider.scss';
+@import '../blocks/card-indicators/card-indicators.scss';
+
+@import '../blocks/pages/index-page/index-page.scss';
+@import '../blocks/pages/about-page/about-page.scss';
+@import '../blocks/pages/products-page/products-page.scss';
+@import '../blocks/pages/product-open-page/product-open-page.scss';
+@import '../blocks/pages/contacts-page/contacts-page.scss';
+
+@import '../blocks/slider-img/slider-img.scss';
+@import '../blocks/modal/modal.scss';

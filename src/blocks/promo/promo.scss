@@ -1,0 +1,61 @@
+.promo {
+	height: 520px;
+	background: $blue--dark url(../img/promo-bg.jpg) no-repeat center bottom / cover;
+	color: $white;
+
+	.wrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+	}
+
+	&__info {
+		width: 100%;
+		max-width: 455px;
+
+		h1 {
+			margin-bottom: 15px;
+		}
+
+		p {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__banner {
+		margin-top: 70px;
+	}
+
+	@include width-md {
+
+		&__info {
+			max-width: 50%;
+		}
+	}
+
+	@include width-xs {
+		background-position: left bottom;
+		height: auto;
+		padding: 30px 0;
+
+		.wrap {
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+
+		&__info {
+			max-width: 100%;
+			order: 1;
+		}
+
+		&__banner {
+			max-width: 200px;
+			height: 200px;
+			margin-top: 0;
+			margin-bottom: 50px;
+			border-radius: 50%;
+			background-color: fade-out(#5063fc, 0.5);
+		}
+	}
+}

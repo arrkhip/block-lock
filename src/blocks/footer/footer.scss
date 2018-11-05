@@ -1,0 +1,194 @@
+.footer {
+	padding-top: 30px;
+	padding-bottom: 20px;
+	color: $white;
+	background-color: $blue--dark;
+
+	.wrap {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	&__col {
+
+		&:nth-last-child(2) {
+			margin-right: 180px;
+		}
+	}
+
+	&__logo {
+
+	}
+
+	&__title {
+		position: relative;
+		font-size: 1.2rem;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	&__switch {
+		display: none;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 9px;
+		height: 7px;
+		overflow: hidden;
+		@include trs;
+
+		&--open {
+			transform: rotate(180deg);
+		}
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			width: 2px;
+			height: 10px;
+			background-color: $white;
+		}
+
+		&::before {
+			left: 0;
+			transform: rotate(45deg);
+		}
+
+		&::after {
+			right: 0;
+			transform: rotate(-45deg);
+		}
+	}
+
+	&__list {
+		padding-top: 16px;
+
+		&-item {
+			display: flex;
+			align-items: center;
+
+
+			&+& {
+				margin-top: 16px;
+			}
+
+			img+a,
+			img+span {
+				margin-left: 15px;
+			}
+
+			a,
+			span {
+				font-size: 1.2rem;
+				line-height: 1.6rem;
+				font-weight: 400;
+			}
+
+			a {
+				@include trs;
+
+				&:hover {
+					color: $blue;
+				}
+			}
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		padding-top: 20px;
+		margin-top: 15px;
+		border-top: 1px solid fade-out($white, .5);
+		font-size: 1.2rem;
+	}
+
+	&__author {
+
+		a {
+			text-decoration: underline;
+			@include trs;
+
+			&:hover {
+				color: $blue;
+			}
+		}
+	}
+
+	@include width-md {
+
+		&__col:nth-last-child(2) {
+			margin-right: 0;
+		}
+	}
+
+	@include width-sm {
+
+		.wrap {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&__col {
+			width: 100%;
+			margin-top: 30px;
+		}
+
+		&__title {
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		&__list {
+			padding-top: 0;
+			visibility: hidden;
+			height: 0;
+			transform: translateY(-20px);
+			transition: transform .3s;
+			opacity: 0;
+
+			&--open {
+				padding-top: 16px;
+				visibility: visible;
+				height: auto;
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		&__switch {
+			display: block;
+		}
+
+		&__logo {
+
+			img {
+				height: 30px;
+			}
+		}
+
+		&__bottom {
+			margin-top: 30px;
+		}
+	}
+
+	@include width-xs {
+
+		&__bottom {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		&__copyright {
+			margin-bottom: 10px;
+		}
+	}
+}

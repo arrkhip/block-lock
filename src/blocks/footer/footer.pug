@@ -1,0 +1,39 @@
+mixin footer() 
+	+b.FOOTER.footer
+		.wrap
+			+e.col
+				+e.logo
+					img(src="img/logo-white.svg", alt="")
+			+e.col
+				+e.title Продукция
+					+e.switch
+				+e.list
+					+e.list-item
+						a(href="#") Блок замки МБГ
+					+e.list-item
+						a(href="#") Электромагнитный замок <br> ЗБ-1 
+					+e.list-item
+						a(href="#") Обменные рейки
+			+e.col
+				+e.title Контакты
+					+e.switch
+				+e.list
+					+e.list-item
+						img(src="img/icons/phone-white.svg", alt="")
+						a(href="tel:8 (846) 991-65-25") 8 (846) 991-65-25
+					+e.list-item 
+						img(src="img/icons/mail-white.svg", alt="")
+						a(href="mailto:info@blok-zamok.ru") info@blok-zamok.ru
+			+e.col
+				+e.title О компании                  
+					+e.switch
+				+e.list
+					+e.list-item
+						img(src="img/icons/place.svg", alt="")
+						span г.Самара, <br> ул. Республиканская д. 60
+			+e.bottom
+				+e.copyright
+					p &copy;2018  Блок замок
+				+e.author
+					p Разработка и сопровождение сайтов 
+						a(href="https://varnoff-studio.ru/" target="_blank") Varnoff-studio

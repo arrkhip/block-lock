@@ -1,0 +1,53 @@
+extends ../layout/layoutBase.pug
+
+include ../../blocks/header/header
+include ../../blocks/card-products/card-products
+include ../../blocks/footer/footer
+include ../../blocks/modal/modal
+
+block content
+	- var page = 'products';
+
+	+b.products-page
+		+header()
+		.bread-crumbs 
+			.wrap
+				ul
+					li
+						a(href="#") Главная  
+					li 
+						span /   
+					li
+						span Продукция 
+		+e.wrap.wrap
+			+e.menu
+				+e.UL.menu-list
+					+e.LI.menu-title Категория
+					+e.LI.menu-item--active
+						a(href="#") Блок замок МБГ
+					+e.LI.menu-item
+						a(href="#") Электромагнитный замок  ЗБ-1
+					+e.LI.menu-item
+						a(href="#") Обменные рейки
+			+e.content
+				+e.filters
+					select
+						option По популярности
+						option По популярности
+						option По популярности
+					select
+						option По названию
+						option По названию
+						option По названию
+				+e.list
+					+card-products('img/card-products__banner-1.png', 'Механический одноключевой замок МБГ-31 (тип 31М)', 'js-open-modal') 
+					+card-products('img/card-products__banner-2.png', 'Механический двухключевой замок МБГ-32 (тип 32М)', 'js-open-modal')  
+					+card-products('img/card-products__banner-3.png', 'Механический трехключевой замок МБГ-33 (тип 33М)', 'js-open-modal') 
+					+card-products('img/card-products__banner-4.png', 'Механический четырехключевой замок МБГ-34 (тип 34М)', 'js-open-modal') 
+					+card-products('img/card-products__banner-5.png', 'Поворотный замок ЗП (МБГ-32П)', 'js-open-modal')  
+					+card-products('img/card-products__banner-6.png', 'Механический трехключевой замок МБГ-33 (тип 33М)', 'js-open-modal')  
+
+		+footer()
+		+modal()
+
+	

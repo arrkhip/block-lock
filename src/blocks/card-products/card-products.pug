@@ -1,0 +1,7 @@
+mixin card-products(imgSrc, text, mod) 
+	+b.card-products
+		+e.A.link(href="product-open.html")
+		+e.banner
+			img(src=imgSrc, alt="")
+		+e.P.descr!= text
+		button.btn(class= mod) Заказать

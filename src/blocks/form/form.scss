@@ -1,0 +1,34 @@
+.form {
+	width: 100%;
+	max-width: 390px;
+	color: #010101;;
+
+	&--white {
+		color: $white;
+
+		input,
+		textarea {
+			background-color: #f0f0f0;
+			border: none;
+		}
+	}
+
+	h2 {
+		margin-bottom: 40px;
+	}
+
+	label {
+		display: inline-block;
+		margin-bottom: 8px;
+	}
+
+	input,
+	textarea {
+		margin-bottom: 20px;
+	}
+
+	.btn {
+		display: block;
+		margin-top: 20px;
+	}
+}

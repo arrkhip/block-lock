@@ -1,0 +1,18 @@
+extends ../layout/layoutBase.pug
+
+include ../../blocks/header/header
+include ../../blocks/promo/promo
+include ../../blocks/goods/goods
+include ../../blocks/footer/footer
+include ../../blocks/advantage/advantage
+include ../../blocks/bid/bid
+
+block content
+
+	+b.index-page
+		+header('--empty')
+		+promo()
+		+goods()
+		+advantage()
+		+bid()
+		+footer()

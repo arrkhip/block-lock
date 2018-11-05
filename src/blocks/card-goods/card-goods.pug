@@ -1,0 +1,7 @@
+mixin card-goods(text, imgSrc, mod) 
+	+b.card-goods(class= mod)
+		+e.info
+			p!= text
+			a.btn.btn--empty(href="#") Все модели
+			+e.banner
+				img(src=imgSrc, alt="")

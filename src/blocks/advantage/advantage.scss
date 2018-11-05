@@ -1,0 +1,99 @@
+.advantage {
+	padding-top: 45px;
+
+	h2 {
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 75px;
+	}
+
+	&__box {
+
+		&-inner {
+			display: flex;
+			align-items: center;
+			background-color: $blue--light;
+			height: 570px;
+		}
+	}
+
+	&__info  {
+		width: 50%;
+		padding-left: 50px;
+		padding-right: 85px;
+
+		h2 {
+			text-align: left;
+			margin-bottom: 30px;
+		}
+
+		p {
+
+			&:not(:first-child) {
+				margin-top: 25px;
+			}
+		}
+
+		.btn {
+			margin-top: 20px;
+		}
+	}
+
+	&__banner {
+		width: 50%;
+	}
+	
+
+	@include width-lg {
+		
+		&__box-inner {
+			height: auto;
+		}
+
+		&__info  {
+			padding-left: 20px;
+			padding-right: 20px;
+			width: 50%;
+		}
+	}
+
+	@include width-md {
+
+		.md-hidden {
+			display: none;
+		}
+
+		&__box-inner {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&__info  {
+			order: 1;
+			width: 100%;
+			padding: 40px 20px;
+		}
+
+		&__banner {
+			width: 100%;
+		}
+	}
+
+	@include width-sm {
+		
+		&__list {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.card-advantage:not(:first-child) {
+			margin-top: 50px;
+		}
+	}
+}

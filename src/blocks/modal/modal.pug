@@ -1,0 +1,9 @@
+include ../../blocks/form/form
+
+mixin modal() 
+	+b.modal
+		+e.inner
+			+e.close
+				img(src="img/icons/close.svg", alt="")
+			h2 Напишите нам
+			+form()

@@ -1,0 +1,44 @@
+extends ../layout/layoutBase.pug
+
+include ../../blocks/header/header
+include ../../blocks/contacts/contacts
+include ../../blocks/footer/footer
+
+block content
+	- var page = 'contacts';
+
+	+b.contacts-page
+		+header()
+		.bread-crumbs 
+			.wrap
+				ul
+					li
+						a(href="#") Главная  
+					li 
+						span /   
+					li
+						span Контакты
+		+contacts()
+		
+		+footer()
+
+	script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU", type="text/javascript")
+	script(type="text/javascript").
+		ymaps.ready(init);
+
+		function init(){ 
+			var myMap = new ymaps.Map("map", {
+				center: [53.239720, 50.276719],
+				zoom: 16,
+				controls: []
+			}); 
+
+			var myPlacemark = new ymaps.Placemark([53.239720, 50.276719], {
+				hintContent: 'Блок Замок',
+				balloonContent: 'У нас Вы найдете одноключевые, двухключевые, трехключевые и четырехключевые механические замки, поворотный замок, электромагнитный замок.'
+			});
+
+			myMap.geoObjects.add(myPlacemark);
+			myMap.behaviors.disable('scrollZoom')
+		}
+

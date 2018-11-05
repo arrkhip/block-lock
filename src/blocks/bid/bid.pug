@@ -1,0 +1,8 @@
+include ../../blocks/form/form
+
+mixin bid() 
+	+b.bid
+		.wrap(class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s")
+			+e.banner
+				img(src="img/bid__banner.png", alt="")
+			+form('Подать заявку','--white')

@@ -1,0 +1,11 @@
+include ../../blocks/card-goods/card-goods
+
+mixin goods() 
+	+b.goods
+		.wrap 
+			h2 Продукция
+			+e.list(class="wow fadeInUp", data-wow-duration="1s" data-wow-delay=".3s")
+				+card-goods('Блок-замки МБГ', 'img/card-goods__banner-1.png', '--blue-dark')
+				+card-goods('Электромагнитный замок <br> ЗБ-1', 'img/card-goods__banner-2.png', '--blue')
+				+card-goods('Обменные рейки', 'img/card-goods__banner-3.png', '--green')
+				

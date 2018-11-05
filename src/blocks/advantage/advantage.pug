@@ -1,0 +1,23 @@
+include ../../blocks/card-advantage/card-advantage
+include ../../blocks/slider-img/slider-img
+
+mixin advantage() 
+	+b.advantage
+		.wrap 
+			h2 Наши преимущества
+			+e.list(class="goods__list wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s")
+				+card-advantage('img/icons/advantage-1.svg', 'Быстрое исполнение заказа')
+				+card-advantage('img/icons/advantage-2.svg', 'Система скидок')
+				+card-advantage('img/icons/advantage-3.svg', 'Индивидуальный подход <br class="md-hidden"> к клиенту')
+				+card-advantage('img/icons/advantage-4.svg', 'Оптимальное сочетание "цена-качество"')
+			+e.box
+				+e.box-inner
+					+e.info(class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s") 
+						h2 Собственное производство
+						p Наша компания изготавливает блокировочные замки для энергообъектов и предприятий Российской Федерации, стран СНГ, а также на экспорт в качестве комплектующего изделия в составе электроподстанций.
+						p У нас Вы найдете одноключевые, двухключевые, трехключевые и четырехключевые механические замки, поворотный замок, электромагнитный замок.
+						p Помимо блокировочных замков, мы предлагаем Вам обменные рейки с возможностью установки от 3х до 12ти запираемых замков и от 1го до 4х запирающих замков соответственно.
+						a.btn.btn--empty(href="#") Подробнее
+					+e.banner(class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s")
+						+slider-img('img/advantage__slider-banner.jpg')
+				

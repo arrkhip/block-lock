@@ -1,0 +1,60 @@
+.slider-img {
+
+	&__arrow {
+		position: absolute;
+		bottom: 0;
+		width: 50px;
+		height: 50px;
+		padding: 0;
+		border: none;
+		background-color: #ced3ff;
+		background-repeat: no-repeat;
+		background-position: center;
+		z-index: 1;
+		@include trs;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&--prev {
+			right: 100%;
+			background-image: url(../img/icons/arrow-left.svg);
+
+			&:hover {
+				background-color: mix($black, #ced3ff, 30%);
+			}
+		}
+
+		&--next {
+			left: 0;
+			background-color: $green;
+			background-image: url(../img/icons/arrow-right.svg);
+
+			&:hover {
+				background-color: mix($black, $green, 30%);
+			}
+		}
+	}
+
+	&__slide  {
+		outline: none;
+	}
+
+	@include width-md {
+
+		&__arrow {
+
+			&--prev {
+				right: 50%;
+			}
+			&--next {
+				left: 50%;
+			}
+		}
+
+		&__slide img {
+			margin: auto;
+		}
+	}
+}
